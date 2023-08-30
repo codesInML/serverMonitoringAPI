@@ -4,6 +4,22 @@ const url = require("url");
 const { StringDecoder } = require("string_decoder");
 const fs = require("fs");
 const config = require("./config");
+const _data = require("./lib/data");
+
+_data.create(
+  "test",
+  "users",
+  {
+    name: "Ifeoluwa Olubo",
+  },
+  function (err) {
+    if (!err) {
+      console.log("Wrote to file DB");
+    } else {
+      console.error(err);
+    }
+  }
+);
 
 const unifiedServer = (req, res) => {
   const parsedUrl = url.parse(req.url, true);
