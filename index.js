@@ -1,8 +1,11 @@
 const http = require("http");
+const https = require("https");
 const url = require("url");
 const { StringDecoder } = require("string_decoder");
+const fs = require("fs");
+const config = require("./config");
 
-const server = http.createServer((req, res) => {
+const unifiedServer = (req, res) => {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
   const trimmedPath = pathname.replace(/^\/+|\/+$/g, "");
@@ -43,22 +46,39 @@ const server = http.createServer((req, res) => {
       console.log(method, trimmedPath, statusCode, payload);
     });
   });
+};
+
+const httpServer = http.createServer(unifiedServer);
+const httpsOptions = {
+  key: fs.readFileSync("./https/key.pem"),
+  cert: fs.readFileSync("./https/cert.pem"),
+};
+const httpsServer = https.createServer(httpsOptions, unifiedServer);
+
+httpServer.listen(config.HTTP_PORT, () => {
+  console.log(
+    `server is listening on port ${config.HTTP_PORT} in ${config.ENV_NAME} mode.`
+  );
 });
 
-server.listen(3000, () => {
-  console.log("server is listening on http://localhost:3000");
+httpsServer.listen(config.HTTPS_PORT, () => {
+  console.log(
+    `server is listening on port ${config.HTTPS_PORT} in ${config.ENV_NAME} mode.`
+  );
 });
 
 const handlers = {};
+
+handlers.ping = (data, callback) => callback(200);
 
 handlers.sampleHandler = (data, callback) => {
   callback(200, { name: "sample handler" });
 };
 
 handlers.notFoundHandler = (data, callback) => {
-  callback(404);
+  callback(404, { message: "route does not exist" });
 };
 
 const router = {
-  sample: handlers.sampleHandler,
+  ping: handlers.pingHandler,
 };
