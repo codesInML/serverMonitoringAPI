@@ -3,29 +3,15 @@ const https = require("https");
 const url = require("url");
 const { StringDecoder } = require("string_decoder");
 const fs = require("fs");
-const config = require("./config");
-const _data = require("./lib/data");
-
-_data.create(
-  "test",
-  "users",
-  {
-    name: "Ifeoluwa Olubo",
-  },
-  function (err) {
-    if (!err) {
-      console.log("Wrote to file DB");
-    } else {
-      console.error(err);
-    }
-  }
-);
+const config = require("./lib/config");
+const handlers = require("./lib/handlers");
+const helpers = require("./lib/helpers");
 
 const unifiedServer = (req, res) => {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
   const trimmedPath = pathname.replace(/^\/+|\/+$/g, "");
-  const queryString = parsedUrl.query;
+  const query = parsedUrl.query;
   const headers = req.headers;
   const method = req.method.toUpperCase();
 
@@ -46,10 +32,10 @@ const unifiedServer = (req, res) => {
 
     const data = {
       trimmedPath,
-      queryString,
+      query,
       method,
       headers,
-      body: buffer,
+      body: helpers.parseJSONToObject(buffer),
     };
 
     chosenHandler(data, (statusCode, payload) => {
@@ -83,18 +69,7 @@ httpsServer.listen(config.HTTPS_PORT, () => {
   );
 });
 
-const handlers = {};
-
-handlers.ping = (data, callback) => callback(200);
-
-handlers.sampleHandler = (data, callback) => {
-  callback(200, { name: "sample handler" });
-};
-
-handlers.notFoundHandler = (data, callback) => {
-  callback(404, { message: "route does not exist" });
-};
-
 const router = {
   ping: handlers.pingHandler,
+  users: handlers.users,
 };
