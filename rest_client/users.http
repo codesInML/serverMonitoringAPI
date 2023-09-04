@@ -4,7 +4,7 @@ POST http://localhost:3000/users
 {
     "firstName": "Ifeoluwa",
     "lastName": "Olubo",
-    "email": "ifeoluwaolubo+1@gmail.com",
+    "email": "ifeoluwaolubo@gmail.com",
     "phoneNumber": "08084356673",
     "password": "12345678",
     "tosAgreement": true

@@ -72,4 +72,5 @@ httpsServer.listen(config.HTTPS_PORT, () => {
 const router = {
   ping: handlers.pingHandler,
   users: handlers.users,
+  tokens: handlers.tokens,
 };
