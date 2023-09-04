@@ -12,3 +12,14 @@ POST http://localhost:3000/users
 
 ### GET USERS
 GET http://localhost:3000/users?email=ifeoluwaolubo@gmail.com
+
+### UPDATE USERS
+PUT http://localhost:3000/users
+
+{
+    "email": "ifeoluwaolubo@gmail.com",
+    "phoneNumber": "09028849304"
+}
+
+### UPDATE USERS
+DELETE http://localhost:3000/users?email=ifeoluwaolubo+1@gmail.com
