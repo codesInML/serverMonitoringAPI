@@ -1,0 +1,10 @@
+### CREATE TOKEN
+POST http://localhost:3000/tokens
+
+{
+    "email": "ifeoluwaolubo@gmail.com",
+    "password": "12345678"
+}
+
+### GET TOKEN
+GET http://localhost:3000/tokens?token=lH33R7T33pmAklUM98rxdcJhrxdtmabjqcMmmNvA78JoP6L6E9H2iRAcoZN8mGORoRANht6ArKSwkDgqE15hiYYGTvlkzgGpdXK75kITcqvyPIpI5uGHmPrcwFxdOj9ynduQIm0IX2jOM4cEsQ3h3NlxTBgOWnwPqGkOk1CN95FCMQlntPeAj6FN8t8ibiJRrEnkoTODUIYeMmJCOqqPCsLPkGUs3m2ZcOi0ZSh1SF9KAdsVaAhqH7CRm3
