@@ -4,22 +4,25 @@ POST http://localhost:3000/users
 {
     "firstName": "Ifeoluwa",
     "lastName": "Olubo",
-    "email": "ifeoluwaolubo@gmail.com",
+    "email": "ifeoluwaolubo1@gmail.com",
     "phoneNumber": "08084356673",
     "password": "12345678",
     "tosAgreement": true
 }
 
 ### GET USERS
-GET http://localhost:3000/users?email=ifeoluwaolubo@gmail.com
+GET http://localhost:3000/users?email=ifeoluwaolubo1@gmail.com
+token: DZVqKPsjZ9clMtURfe2IALetEguii7ltfdLc3Qe8MU1SmpZtJnmo1YDQflLzVzAmaRoU5FND61k0O0ID8SiUwcYzD43201TewROYaVAIUIZb7ZRoWdt3vLqwgxDzrt3EjxmvQ5wNwfxu0221PhBwt68U71dHthyBCP8Vwx4jBUUg61B5qEJSKDqWlSfVGhA5sxImXgrPLTKVhpwGdUTDNrnoLobQDt5K6Tj0DTmxHW0ygsFY6IEelxK6xG
 
 ### UPDATE USERS
 PUT http://localhost:3000/users
+token: DZVqKPsjZ9clMtURfe2IALetEguii7ltfdLc3Qe8MU1SmpZtJnmo1YDQflLzVzAmaRoU5FND61k0O0ID8SiUwcYzD43201TewROYaVAIUIZb7ZRoWdt3vLqwgxDzrt3EjxmvQ5wNwfxu0221PhBwt68U71dHthyBCP8Vwx4jBUUg61B5qEJSKDqWlSfVGhA5sxImXgrPLTKVhpwGdUTDNrnoLobQDt5K6Tj0DTmxHW0ygsFY6IEelxK6xG
 
 {
-    "email": "ifeoluwaolubo@gmail.com",
+    "email": "ifeoluwaolubo1@gmail.com",
     "phoneNumber": "09028849304"
 }
 
-### UPDATE USERS
-DELETE http://localhost:3000/users?email=ifeoluwaolubo+1@gmail.com
+### DELETE USER
+DELETE http://localhost:3000/users?email=ifeoluwaolubo1@gmail.com
+token: DZVqKPsjZ9clMtURfe2IALetEguii7ltfdLc3Qe8MU1SmpZtJnmo1YDQflLzVzAmaRoU5FND61k0O0ID8SiUwcYzD43201TewROYaVAIUIZb7ZRoWdt3vLqwgxDzrt3EjxmvQ5wNwfxu0221PhBwt68U71dHthyBCP8Vwx4jBUUg61B5qEJSKDqWlSfVGhA5sxImXgrPLTKVhpwGdUTDNrnoLobQDt5K6Tj0DTmxHW0ygsFY6IEelxK6xG
