@@ -1,28 +1,30 @@
-### CREATE USERS
-POST http://localhost:3000/users
-
-{
-    "firstName": "Ifeoluwa",
-    "lastName": "Olubo",
-    "email": "ifeoluwaolubo1@gmail.com",
-    "phoneNumber": "08084356673",
-    "password": "12345678",
-    "tosAgreement": true
-}
-
-### GET USERS
-GET http://localhost:3000/users?email=ifeoluwaolubo@gmail.com
-token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
-
-### UPDATE USERS
-PUT http://localhost:3000/users
+### CREATE CHECK
+POST http://localhost:3000/checks
 token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
 
 {
-    "email": "ifeoluwaolubo1@gmail.com",
-    "phoneNumber": "09028849304"
+    "protocol": "http",
+    "method": "get",
+    "url": "google.com",
+    "successCodes": [200, 201, "200"],
+    "timeoutSeconds": 4
 }
 
-### DELETE USER
-DELETE http://localhost:3000/users?email=ifeoluwaolubo1@gmail.com
+### GET CHECK
+GET http://localhost:3000/checks?id=HfjRCrghv2n7cbLBnk7X
+token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
+
+### UPDATE CHECK
+PUT http://localhost:3000/checks
+token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
+
+{
+    "id": "HfjRCrghv2n7cbLBnk7X",
+    "protocol": "https",
+    "method": "post",
+    "timeoutSeconds": 5
+}
+
+### DELETE CHECK
+DELETE http://localhost:3000/checks?id=HfjRCrghv2n7cbLBnk7X
 token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM

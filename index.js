@@ -40,8 +40,8 @@ const unifiedServer = (req, res) => {
 
     chosenHandler(data, (statusCode, payload) => {
       statusCode = typeof +statusCode == "number" ? +statusCode : 200;
-      payload = typeof payload == "object" ? payload : {};
-      payload.Status = statusCode;
+      payload = typeof payload == "object" ? { data: payload } : { data: {} };
+      payload.status = statusCode;
 
       res.setHeader("Content-Type", "application/json");
       res.writeHead(statusCode);
@@ -74,4 +74,5 @@ const router = {
   ping: handlers.pingHandler,
   users: handlers.users,
   tokens: handlers.tokens,
+  checks: handlers.checks,
 };

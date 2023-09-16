@@ -2,7 +2,7 @@
 POST http://localhost:3000/tokens
 
 {
-    "email": "ifeoluwaolubo1@gmail.com",
+    "email": "ifeoluwaolubo@gmail.com",
     "password": "12345678"
 }
 
