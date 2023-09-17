@@ -4,7 +4,7 @@ POST http://localhost:3000/users
 {
     "firstName": "Ifeoluwa",
     "lastName": "Olubo",
-    "email": "ifeoluwaolubo1@gmail.com",
+    "email": "ifeoluwaolubo@gmail.com",
     "phoneNumber": "08084356673",
     "password": "12345678",
     "tosAgreement": true
@@ -12,17 +12,17 @@ POST http://localhost:3000/users
 
 ### GET USERS
 GET http://localhost:3000/users?email=ifeoluwaolubo@gmail.com
-token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
+token: bYtfrWQqopm7L5qy3QSkCmpbTN1hfeWv91CsX2Hco65VzWw5eoLtbbekYbfj8pnjnJAhJeeCByildrqPRVugk59ckf0io73qMOVH5ADQK5FLqWXrQ0qqXRMr6bofxEuxaALBRTZtdFapUYKSxB42SNiMn1Mrp5YsezrWDQDGeby2dZnk8bwcJx96PvBWn63be23ajOMPIYni9mULre2telRtbIz7UezpZjiDVEZ6M18IADeZ99sbXBHEqs
 
 ### UPDATE USERS
 PUT http://localhost:3000/users
-token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
+token: bYtfrWQqopm7L5qy3QSkCmpbTN1hfeWv91CsX2Hco65VzWw5eoLtbbekYbfj8pnjnJAhJeeCByildrqPRVugk59ckf0io73qMOVH5ADQK5FLqWXrQ0qqXRMr6bofxEuxaALBRTZtdFapUYKSxB42SNiMn1Mrp5YsezrWDQDGeby2dZnk8bwcJx96PvBWn63be23ajOMPIYni9mULre2telRtbIz7UezpZjiDVEZ6M18IADeZ99sbXBHEqs
 
 {
-    "email": "ifeoluwaolubo1@gmail.com",
+    "email": "ifeoluwaolubo@gmail.com",
     "phoneNumber": "09028849304"
 }
 
 ### DELETE USER
-DELETE http://localhost:3000/users?email=ifeoluwaolubo1@gmail.com
-token: q1LuTKmoGZOKLLbbp7RVzMQKHafVqTNCIuS0PGzQspGyeQgZH0x0m3iCz2mb0duGWuH2JM4Zc6mZZMgwPakvnUBNmRbBmIDL14je3ghT3PzcSVHNFd7jhN5NjcyqjRSyiza38c8OLG7k0FyaElCilaFEMYG29u2LQeVmCle0UPvVjZ8BH5BQlyXfcSMmBwNBdytOhLuYzzVqaq6Y7EK2SB06xRgPCjDwZtG1Ns7vHmXu1fnyathHI7OUVM
+DELETE http://localhost:3000/users?email=ifeoluwaolubo@gmail.com
+token: bYtfrWQqopm7L5qy3QSkCmpbTN1hfeWv91CsX2Hco65VzWw5eoLtbbekYbfj8pnjnJAhJeeCByildrqPRVugk59ckf0io73qMOVH5ADQK5FLqWXrQ0qqXRMr6bofxEuxaALBRTZtdFapUYKSxB42SNiMn1Mrp5YsezrWDQDGeby2dZnk8bwcJx96PvBWn63be23ajOMPIYni9mULre2telRtbIz7UezpZjiDVEZ6M18IADeZ99sbXBHEqs
